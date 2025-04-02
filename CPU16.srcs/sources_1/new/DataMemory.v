@@ -16,7 +16,7 @@ module DataMemory(
         mem[5] = 16'h3;
     end
    
-    // TODO memory is byte addressable. Fix this.
+    // TODO memory should be byte addressable. Fix this.
     
     always @(negedge clk) begin
         if (mem_write) begin
