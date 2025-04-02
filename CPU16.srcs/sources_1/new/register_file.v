@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
 // TODO balance output
+// TODO initialize all memory locations to 0
 
 module RegisterFile(
     input [3:0] reg1,
@@ -35,6 +36,4 @@ module RegisterFile(
             file[reg_write] = write_data;
         end
     end
-    
-    // TODO test output position 0, 1 and 2
 endmodule

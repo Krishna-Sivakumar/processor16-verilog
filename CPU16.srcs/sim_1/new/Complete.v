@@ -83,17 +83,14 @@ module Complete;
     RegisterFile reg_file(
         .reg1(RtRd),
         .reg2(Rs),
-        .reg_write(RtRd),           // TODO take a look at this for I-type and J-type instructions
+        .reg_write(RtRd),
         .write_data(RegDmuMuxOut),
         .clk(clk),
         .enable_write(EnableWrite),
         .result_reg1(RegA),
         .result_reg2(RegB)
     );
-    
-    // TODO in the case of I-Type instructions, value of RegA = Rs, value of RegB = FunctImm.
-    // TODO in the case of jmp, RegB must be replaced by 1.
-        
+            
     ALUControl alu_ctl (
         .instruction(Instruction),
         .alu_operation(AluControlOut)

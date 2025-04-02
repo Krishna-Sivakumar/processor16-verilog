@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
 
+// TODO initialize all memory locations to 0
+
 module DataMemory(
     input clk,
     input [15:0] location,

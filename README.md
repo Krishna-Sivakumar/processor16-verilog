@@ -30,3 +30,13 @@ CPU16.srcs/
         └── synth_1
             └── sub_16bit_test.dcp
 ```
+
+todos:
+```grep -i -e "TODO" CPU16.srcs```
+```
+CPU16.srcs/sources_1/new/register_file.v:// TODO balance output
+CPU16.srcs/sources_1/new/register_file.v:// TODO initialize all memory locations to 0
+CPU16.srcs/sources_1/new/ALU.v:// TODO balance output
+CPU16.srcs/sources_1/new/DataMemory.v:// TODO initialize all memory locations to 0
+CPU16.srcs/sources_1/new/DataMemory.v:    // TODO memory should be byte addressable. Fix this.
+```
