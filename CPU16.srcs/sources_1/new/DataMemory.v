@@ -1,37 +1,41 @@
 `timescale 1ns / 1ps
 
-// TODO initialize all memory locations to 0
-
 module DataMemory(
     input clk,
-    input [15:0] location,
+    input [7:0] location,
     input [15:0] write_data,
     input mem_write,             // if mem_write is set, write data to location.
     input mem_read,              // if mem_read is set, read data from location.
     output reg [15:0] read_data
     );
 
-    reg [15:0] mem [15:0];
-    reg [15:0] slot;
+    integer i;
+    reg [7:0] mem [31:0];
     
     initial begin
-        mem[6] = 16'h3;
+        for (i = 0; i < 32; i = i + 1) begin
+            mem[i] = 8'h0;
+        end
+        mem[6] = 8'h3;
+        mem[7] = 8'h0;
     end
-   
-    // TODO memory should be byte addressable. Fix this.
-    // TODO read memory in big-endian mode and swap the bytes around
-    // TODO write memory in big-endian mode and swap the bytes into the memory
     
     always @(negedge clk) begin
         if (mem_write) begin
-            mem[location] <= write_data;
+            // little-endian:   0x ff 0a (example value)
+            // big-endian:      0x 0a ff
+            mem[location] <= write_data[15:8];
+            mem[location+1] <= write_data[7:0];
             read_data <= 0;
         end
     end
     
     always @(*) begin
         if (mem_read) begin
-            read_data <= mem[location];
+            // little-endian:   0x ff 0a (example value)
+            // big-endian:      0x 0a ff
+            read_data[7:0] = mem[location];
+            read_data[15:8] = mem[location+1];
         end
     end
 endmodule
