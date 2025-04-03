@@ -28,7 +28,7 @@ module ALURegisterMux(
 );
     always @(*) begin
         if (is_imm) begin
-            reg1 <= {12'h0, immediate};
+            reg1 <= { {12{immediate[3]}}, immediate }; // sign extension
         end
         else
             reg1 <= in_reg1;
