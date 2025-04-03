@@ -22,4 +22,4 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/shiki/repos/590cse-project1/C
 INFO: [VRFC 10-311] analyzing module Complete
 WARNING: [VRFC 10-3248] data object 'PCNext' is already declared [/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sim_1/new/Complete.v:36]
 WARNING: [VRFC 10-9364] second declaration of 'PCNext' is ignored [/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sim_1/new/Complete.v:36]
-WARNING: [VRFC 10-2938] 'AluZeroOut' is already implicitly declared on line 46 [/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sim_1/new/Complete.v:57]
+WARNING: [VRFC 10-2938] 'AluZeroOut' is already implicitly declared on line 46 [/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sim_1/new/Complete.v:56]
