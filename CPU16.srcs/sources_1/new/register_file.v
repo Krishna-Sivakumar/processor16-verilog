@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
 
 // TODO balance output
-// TODO initialize all memory locations to 0
 
 module RegisterFile(
     input [3:0] reg1,
@@ -14,13 +13,13 @@ module RegisterFile(
     output reg [15:0] result_reg2       // Rs
     );
     
+    integer i;
     reg [15:0] file [4:0];
     
     initial begin
-        file[4'h0] = 0;
-        file[4'h1] = 0;
-        file[4'h2] = 0;
-        file[4'h3] = 0;
+        for (i = 0; i < 16; i = i + 1) begin
+            file[i] = 0;
+        end
     end
     
     always @(*) begin

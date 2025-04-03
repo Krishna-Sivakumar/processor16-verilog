@@ -22,8 +22,6 @@
 
 module Complete;
 
-    // Test ADDI
-
     reg clk;
     initial begin
         // oscillate the clock every 5ns

@@ -27,8 +27,9 @@ module ALURegisterMux(
     output reg [15:0] reg1
 );
     always @(*) begin
-        if (is_imm)
-            reg1 <= immediate;
+        if (is_imm) begin
+            reg1 <= {12'h0, immediate};
+        end
         else
             reg1 <= in_reg1;
     end

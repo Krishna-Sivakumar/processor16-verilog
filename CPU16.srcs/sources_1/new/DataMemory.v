@@ -15,10 +15,12 @@ module DataMemory(
     reg [15:0] slot;
     
     initial begin
-        mem[0] = 16'h3;
+        mem[6] = 16'h3;
     end
    
     // TODO memory should be byte addressable. Fix this.
+    // TODO read memory in big-endian mode and swap the bytes around
+    // TODO write memory in big-endian mode and swap the bytes into the memory
     
     always @(negedge clk) begin
         if (mem_write) begin

@@ -7,6 +7,9 @@ module ProgramCounterUpdate(
     input branch_zero           // should be 0 for beq, and 1 for bne
     );
     
+    // TODO implement sign extension for jumps on the jmp_address line
+    // TODO test this module
+    
     wire [3:0] opcode = instruction[15:12];
     reg [15:0] immediate;
     reg [11:0] jmp_address;
