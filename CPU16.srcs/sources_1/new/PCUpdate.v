@@ -21,7 +21,7 @@ module ProgramCounterUpdate(
         end else if (opcode == 6) begin
             pc_next <= pc + jmp_address;
         end else begin
-            pc_next <= pc + 4;
+            pc_next <= pc + 2;
         end
     end
 endmodule

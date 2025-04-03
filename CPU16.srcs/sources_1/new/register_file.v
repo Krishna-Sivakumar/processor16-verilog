@@ -18,8 +18,8 @@ module RegisterFile(
     
     initial begin
         file[4'h0] = 0;
-        file[4'h1] = 5;
-        file[4'h2] = 7;
+        file[4'h1] = 0;
+        file[4'h2] = 0;
         file[4'h3] = 0;
     end
     

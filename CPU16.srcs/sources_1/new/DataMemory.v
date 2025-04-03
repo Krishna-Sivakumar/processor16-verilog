@@ -15,7 +15,7 @@ module DataMemory(
     reg [15:0] slot;
     
     initial begin
-        mem[5] = 16'h3;
+        mem[0] = 16'h3;
     end
    
     // TODO memory should be byte addressable. Fix this.

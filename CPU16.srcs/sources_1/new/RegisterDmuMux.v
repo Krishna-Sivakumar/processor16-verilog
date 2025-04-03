@@ -33,5 +33,4 @@ module RegisterDmuMux(
         else
             reg_out <= alu_data;
     end
-    
 endmodule

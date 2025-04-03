@@ -12,12 +12,12 @@ module InstructionMemory(
     initial begin
         // initialization area
         mem[0] = 16'h1_0_1_0;   // R[0] = DM[R[1]+0]
-        mem[1] = 16'h0_0_2_0;   // R[0] = R[0] + R[2]
-        mem[3] = 16'h2_0_1_0;   // DM[R[1]+0] = R[0]
+        mem[1] = 16'h3_0_0_5;   // R[0] = R[0] + 5
+        mem[2] = 16'h2_0_1_0;   // DM[R[1]+0] = R[0]
     end
 
     always @(posedge clk) begin
-        instruction = mem[pc >> 2]; // each instruction is 16 bits. The address is byte-wise, hence we divide by 4 to get the current instruction.
+        instruction = mem[pc >> 1];
         $monitor("time: %0t, slot: %h, item at slot: %h", $time, slot, mem[slot]);
     end
 endmodule
