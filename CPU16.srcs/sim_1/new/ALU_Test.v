@@ -43,7 +43,7 @@ module ALU_Test;
     );
 
     initial begin
-        $monitor("Time = %0t | A = %h | B = %h | control = %h | result = %h", $time, A, B, control, result);
+//        $monitor("Time = %0t | A = %h | B = %h | control = %h | result = %h", $time, A, B, control, result);
         A = 16'h000f; B = 16'h0006; control = 4'b0000; #10;     // AND Test; 0xf & 0x6 = 0x6 
         A = 16'h000f; B = 16'h0000; control = 4'b0001; #20;     // OR Test; 0xf | 0x0 = 0xf 
         A = 16'h000f; B = 16'h0001; control = 4'b0010; #30;     // ADD Test; 0xf + 0x1 = 0x10

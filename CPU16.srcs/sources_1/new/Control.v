@@ -3,10 +3,10 @@
 module Control(
     input [15:0] instruction,
     input clk,
-    output reg reg_write,       // signify that result is written back to rt / rd
-    output reg is_immediate,    // signify that the first register is an immediate value
-    output reg mem_write,       // signify that the data memory must be written to
-    output reg mem_read         // signify that the data memory is being read from
+    output reg reg_write,       // signifies that result is written back to rt / rd
+    output reg is_immediate,    // signifies that the first register is an immediate value
+    output reg mem_write,       // signifies that the data memory must be written to
+    output reg mem_read         // signifies that the data memory is being read from
     );
     
     wire [3:0] opcode = instruction[15:12];

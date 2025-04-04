@@ -24,10 +24,10 @@ module Complete;
 
     reg clk;
     initial begin
-        // oscillate the clock every 5ns
+        // oscillate the clock every 2ns
         clk = 1;
         forever
-            #5 clk = ~clk;
+            #2 clk = ~clk;
     end
     
     wire [15:0] PC, PCNext, Instruction;
@@ -124,9 +124,8 @@ module Complete;
 
     
     initial begin
-        // NOTE TO INSTRUCTORS: please set the number below to (the amount of instructions in your program) * 10 + 5
-        #420;
-        $finish;
+        // NOTE FOR INSTRUCTORS: please set the timestamp below to a long enough number so that the program can finish executing.
+        #200 $finish;
     end
     
 endmodule
