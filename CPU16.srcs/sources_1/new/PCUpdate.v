@@ -22,14 +22,14 @@ module ProgramCounterUpdate(
         jmp_address = jmp_address << 1;                             // then multiply it by 2
         
         if (opcode == 4 && branch_zero == 0) begin          // beq
-            pc_next = pc + immediate;                               // program counter has already advanced at the beginning of this cycle, so we don't need to add 2.
+            pc_next = pc + immediate + 2;                               // program counter has already advanced at the beginning of this cycle, so we don't need to add 2.
             $monitor("PC | beq      | PC: %h | updated: %h | PCNext: %h", pc, pc + immediate, pc_next);
         end else if (opcode == 5 && branch_zero == 1) begin // bne
             $monitor("PC | bne");
-            pc_next = pc + immediate;                               // program counter has already advanced at the beginning of this cycle, so we don't need to add 2.
+            pc_next = pc + immediate + 2;                               // program counter has already advanced at the beginning of this cycle, so we don't need to add 2.
         end else if (opcode == 6) begin                     // jmp
             $monitor("PC | jump     | PC: %h | updated: %h | jmp_address: %h", pc, pc + jmp_address, jmp_address);
-            pc_next = pc + jmp_address;                             // sign-extended jump address. The program counter has already advanced at the beginning of this cycle, so we don't need to add 2.
+            pc_next = pc + jmp_address + 2;                             // sign-extended jump address. The program counter has already advanced at the beginning of this cycle, so we don't need to add 2.
         end else begin                                              // advance program counter; regular case
             pc_next = pc + 2;
             $monitor("PC | regular  | PC: %h | updated: %h | PCNext: %h", pc, pc + 2, pc_next);

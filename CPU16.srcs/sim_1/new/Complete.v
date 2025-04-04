@@ -25,7 +25,7 @@ module Complete;
     reg clk;
     initial begin
         // oscillate the clock every 5ns
-        clk = 0;
+        clk = 1;
         forever
             #5 clk = ~clk;
     end
@@ -125,7 +125,7 @@ module Complete;
     
     initial begin
         // NOTE TO INSTRUCTORS: please set the number below to (the amount of instructions in your program) * 10 + 5
-        #400;
+        #420;
         $finish;
     end
     

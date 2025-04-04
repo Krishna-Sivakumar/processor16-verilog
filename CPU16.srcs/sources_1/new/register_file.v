@@ -22,7 +22,8 @@ module RegisterFile(
         end
     end
     
-    always @(*) begin
+    // was @(*)
+    always @(reg1, reg2, posedge clk) begin
         result_reg1 <= file[reg1];
         result_reg2 <= file[reg2];
     end
@@ -30,9 +31,9 @@ module RegisterFile(
     always @(negedge clk) begin
         // at a negative edge, if writes are enabled, write some data to a target register.
         // writes are done while the instruction and control signals of the current instruction are still present, before the next positive edge
-        $monitor("Time: %0t | Target Register: %h | Data To Write: %h", $time, reg_write, write_data);
+        $monitor("REGISTER FILE: Time: %0t | Target Register: %h | Data To Write: %h", $time, reg_write, write_data);
         if (enable_write) begin
-            file[reg_write] = write_data;
+            file[reg_write] <= write_data;
         end
     end
 endmodule

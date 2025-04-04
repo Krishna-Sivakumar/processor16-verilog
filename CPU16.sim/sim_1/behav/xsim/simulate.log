@@ -1,0 +1,158 @@
+Time resolution is 1 ps
+PC | regular  | PC: 0000 | updated: 00000002 | PCNext: 0002
+IM | time: 0 | slot: 0000 | instruction: 3116
+ALU Params | A: 0006 | B: 0000 | OpCode: 0
+REGISTER FILE: Time: 5000 | Target Register: 1 | Data To Write: 0006
+PC | regular  | PC: 0002 | updated: 00000004 | PCNext: 0004
+IM | time: 10000 | slot: 0001 | instruction: 41e4
+PC | beq      | PC: 0002 | updated: 000a | PCNext: 0004
+ALU Params | A: 0006 | B: 0000 | OpCode: 4
+is 0006 != 0000? 1
+REGISTER FILE: Time: 10000 | Target Register: 1 | Data To Write: 0000
+PC | beq      | PC: 0004 | updated: 0002 | PCNext: 0006
+PC | regular  | PC: 0004 | updated: 00000006 | PCNext: 0006
+IM | time: 20000 | slot: 0002 | instruction: 311f
+ALU Params | A: ffff | B: 0006 | OpCode: 0
+is ffff != 0006? 1
+REGISTER FILE: Time: 20000 | Target Register: 1 | Data To Write: 0005
+PC | beq      | PC: 0006 | updated: 000a | PCNext: 0008
+PC | regular  | PC: 0006 | updated: 00000008 | PCNext: 0008
+IM | time: 30000 | slot: 0003 | instruction: 3222
+REGISTER FILE: Time: 30000 | Target Register: 2 | Data To Write: 0002
+ALU Params | A: 0002 | B: 0000 | OpCode: 0
+is 0002 != 0000? 1
+PC | beq      | PC: 0008 | updated: 0008 | PCNext: 000a
+PC | regular  | PC: 0008 | updated: 0000000a | PCNext: 000a
+IM | time: 40000 | slot: 0004 | instruction: 22e0
+ALU Params | A: 0000 | B: 0000 | OpCode: 0
+is 0000 != 0000? 0
+REGISTER FILE: Time: 40000 | Target Register: 2 | Data To Write: 0000
+PC | beq      | PC: 000a | updated: 0000 | PCNext: 0002
+PC | regular  | PC: 000a | updated: 0000000c | PCNext: 0002
+IM | time: 50000 | slot: 0005 | instruction: 6ffb
+PC | jump     | PC: 000a | updated: 0000 | jmp_address: fff6
+REGISTER FILE: Time: 50000 | Target Register: f | Data To Write: 0000
+ALU Params | A: 0000 | B: 0000 | OpCode: 2
+PC | beq      | PC: 0002 | updated: 000a | PCNext: 0004
+PC | jump     | PC: 0002 | updated: 03ca | jmp_address: 03c8
+PC | regular  | PC: 0002 | updated: 00000004 | PCNext: 0004
+IM | time: 60000 | slot: 0001 | instruction: 41e4
+REGISTER FILE: Time: 60000 | Target Register: 1 | Data To Write: 0000
+ALU Params | A: 0005 | B: 0000 | OpCode: 4
+is 0005 != 0000? 1
+PC | beq      | PC: 0004 | updated: 0002 | PCNext: 0006
+PC | jump     | PC: 0004 | updated: 0242 | jmp_address: 023e
+PC | regular  | PC: 0004 | updated: 00000006 | PCNext: 0006
+IM | time: 70000 | slot: 0002 | instruction: 311f
+ALU Params | A: ffff | B: 0005 | OpCode: 0
+is ffff != 0005? 1
+REGISTER FILE: Time: 70000 | Target Register: 1 | Data To Write: 0004
+PC | beq      | PC: 0006 | updated: 000a | PCNext: 0008
+PC | jump     | PC: 0006 | updated: 044a | jmp_address: 0444
+PC | regular  | PC: 0006 | updated: 00000008 | PCNext: 0008
+IM | time: 80000 | slot: 0003 | instruction: 3222
+REGISTER FILE: Time: 80000 | Target Register: 2 | Data To Write: 0004
+ALU Params | A: 0002 | B: 0002 | OpCode: 0
+is 0002 != 0002? 0
+PC | beq      | PC: 0008 | updated: 0008 | PCNext: 000a
+PC | jump     | PC: 0008 | updated: 05c8 | jmp_address: 05c0
+PC | regular  | PC: 0008 | updated: 0000000a | PCNext: 000a
+IM | time: 90000 | slot: 0004 | instruction: 22e0
+ALU Params | A: 0000 | B: 0000 | OpCode: 0
+is 0000 != 0000? 0
+REGISTER FILE: Time: 90000 | Target Register: 2 | Data To Write: 0000
+PC | beq      | PC: 000a | updated: 0000 | PCNext: 0002
+PC | jump     | PC: 000a | updated: 0000 | jmp_address: fff6
+PC | regular  | PC: 000a | updated: 0000000c | PCNext: 0002
+IM | time: 100000 | slot: 0005 | instruction: 6ffb
+REGISTER FILE: Time: 100000 | Target Register: f | Data To Write: 0000
+ALU Params | A: 0000 | B: 0000 | OpCode: 2
+PC | beq      | PC: 0002 | updated: 000a | PCNext: 0004
+PC | jump     | PC: 0002 | updated: 03ca | jmp_address: 03c8
+PC | regular  | PC: 0002 | updated: 00000004 | PCNext: 0004
+IM | time: 110000 | slot: 0001 | instruction: 41e4
+REGISTER FILE: Time: 110000 | Target Register: 1 | Data To Write: 0000
+ALU Params | A: 0004 | B: 0000 | OpCode: 4
+is 0004 != 0000? 1
+PC | beq      | PC: 0004 | updated: 0002 | PCNext: 0006
+PC | jump     | PC: 0004 | updated: 0242 | jmp_address: 023e
+PC | regular  | PC: 0004 | updated: 00000006 | PCNext: 0006
+IM | time: 120000 | slot: 0002 | instruction: 311f
+ALU Params | A: ffff | B: 0004 | OpCode: 0
+is ffff != 0004? 1
+REGISTER FILE: Time: 120000 | Target Register: 1 | Data To Write: 0003
+PC | beq      | PC: 0006 | updated: 000a | PCNext: 0008
+PC | jump     | PC: 0006 | updated: 044a | jmp_address: 0444
+PC | regular  | PC: 0006 | updated: 00000008 | PCNext: 0008
+IM | time: 130000 | slot: 0003 | instruction: 3222
+REGISTER FILE: Time: 130000 | Target Register: 2 | Data To Write: 0006
+ALU Params | A: 0002 | B: 0004 | OpCode: 0
+is 0002 != 0004? 1
+PC | beq      | PC: 0008 | updated: 0008 | PCNext: 000a
+PC | jump     | PC: 0008 | updated: 05c8 | jmp_address: 05c0
+PC | regular  | PC: 0008 | updated: 0000000a | PCNext: 000a
+IM | time: 140000 | slot: 0004 | instruction: 22e0
+ALU Params | A: 0000 | B: 0000 | OpCode: 0
+is 0000 != 0000? 0
+REGISTER FILE: Time: 140000 | Target Register: 2 | Data To Write: 0000
+PC | beq      | PC: 000a | updated: 0000 | PCNext: 0002
+PC | jump     | PC: 000a | updated: 0000 | jmp_address: fff6
+PC | regular  | PC: 000a | updated: 0000000c | PCNext: 0002
+IM | time: 150000 | slot: 0005 | instruction: 6ffb
+REGISTER FILE: Time: 150000 | Target Register: f | Data To Write: 0000
+ALU Params | A: 0000 | B: 0000 | OpCode: 2
+PC | beq      | PC: 0002 | updated: 000a | PCNext: 0004
+PC | jump     | PC: 0002 | updated: 03ca | jmp_address: 03c8
+PC | regular  | PC: 0002 | updated: 00000004 | PCNext: 0004
+IM | time: 160000 | slot: 0001 | instruction: 41e4
+REGISTER FILE: Time: 160000 | Target Register: 1 | Data To Write: 0000
+ALU Params | A: 0003 | B: 0000 | OpCode: 4
+is 0003 != 0000? 1
+PC | beq      | PC: 0004 | updated: 0002 | PCNext: 0006
+PC | jump     | PC: 0004 | updated: 0242 | jmp_address: 023e
+PC | regular  | PC: 0004 | updated: 00000006 | PCNext: 0006
+IM | time: 170000 | slot: 0002 | instruction: 311f
+ALU Params | A: ffff | B: 0003 | OpCode: 0
+is ffff != 0003? 1
+REGISTER FILE: Time: 170000 | Target Register: 1 | Data To Write: 0002
+PC | beq      | PC: 0006 | updated: 000a | PCNext: 0008
+PC | jump     | PC: 0006 | updated: 044a | jmp_address: 0444
+PC | regular  | PC: 0006 | updated: 00000008 | PCNext: 0008
+IM | time: 180000 | slot: 0003 | instruction: 3222
+REGISTER FILE: Time: 180000 | Target Register: 2 | Data To Write: 0008
+ALU Params | A: 0002 | B: 0006 | OpCode: 0
+is 0002 != 0006? 1
+PC | beq      | PC: 0008 | updated: 0008 | PCNext: 000a
+PC | jump     | PC: 0008 | updated: 05c8 | jmp_address: 05c0
+PC | regular  | PC: 0008 | updated: 0000000a | PCNext: 000a
+IM | time: 190000 | slot: 0004 | instruction: 22e0
+ALU Params | A: 0000 | B: 0000 | OpCode: 0
+is 0000 != 0000? 0
+REGISTER FILE: Time: 190000 | Target Register: 2 | Data To Write: 0000
+PC | beq      | PC: 000a | updated: 0000 | PCNext: 0002
+PC | jump     | PC: 000a | updated: 0000 | jmp_address: fff6
+PC | regular  | PC: 000a | updated: 0000000c | PCNext: 0002
+IM | time: 200000 | slot: 0005 | instruction: 6ffb
+REGISTER FILE: Time: 200000 | Target Register: f | Data To Write: 0000
+ALU Params | A: 0000 | B: 0000 | OpCode: 2
+PC | beq      | PC: 0002 | updated: 000a | PCNext: 0004
+PC | jump     | PC: 0002 | updated: 03ca | jmp_address: 03c8
+PC | regular  | PC: 0002 | updated: 00000004 | PCNext: 0004
+IM | time: 210000 | slot: 0001 | instruction: 41e4
+REGISTER FILE: Time: 210000 | Target Register: 1 | Data To Write: 0000
+ALU Params | A: 0002 | B: 0000 | OpCode: 4
+is 0002 != 0000? 1
+PC | beq      | PC: 0004 | updated: 0002 | PCNext: 0006
+PC | jump     | PC: 0004 | updated: 0242 | jmp_address: 023e
+PC | regular  | PC: 0004 | updated: 00000006 | PCNext: 0006
+IM | time: 220000 | slot: 0002 | instruction: 311f
+ALU Params | A: ffff | B: 0002 | OpCode: 0
+is ffff != 0002? 1
+REGISTER FILE: Time: 220000 | Target Register: 1 | Data To Write: 0001
+PC | beq      | PC: 0006 | updated: 000a | PCNext: 0008
+PC | jump     | PC: 0006 | updated: 044a | jmp_address: 0444
+PC | regular  | PC: 0006 | updated: 00000008 | PCNext: 0008
+IM | time: 230000 | slot: 0003 | instruction: 3222
+REGISTER FILE: Time: 230000 | Target Register: 2 | Data To Write: 000a
+ALU Params | A: 0002 | B: 0008 | OpCode: 0
+is 0002 != 0008? 1

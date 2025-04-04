@@ -25,29 +25,29 @@ module ALU(
         $monitor("ALU Params | A: %h | B: %h | OpCode: %h", a, b, control);
         case (control)
             4'b0000: begin
-                result = a + b;
-                zero = 0;
+                result <= a + b;
+                zero <= 0;
             end
             4'b0001: begin
-                result = b - a;
-                zero = 0;
+                result <= b - a;
+                zero <= 0;
             end
             4'b0010: begin
-                result = a << b;
-                zero = 0;
+                result <= a << b;
+                zero <= 0;
             end
             4'b0011: begin
-                result = a & b;
-                zero = 0;
+                result <= a & b;
+                zero <= 0;
             end
             4'b0100: begin
                 $monitor("is %h != %h? %h", a, b, a != b);
-                result = 0;
-                zero = a != b;
+                result <= 0;
+                zero <= a != b;
             end
             default: begin
-                result = 0;
-                zero = 0;
+                result <= 0;
+                zero <= 0;
             end
         endcase
     end
