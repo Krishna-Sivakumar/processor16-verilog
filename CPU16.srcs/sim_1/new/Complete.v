@@ -51,8 +51,9 @@ module Complete;
         .clk(clk)
     );
     
-    wire [15:0] RegA, RegB, AluOut, AluZeroOut, DMUOut, RegDmuMuxOut;
+    wire [15:0] RegA, RegB, AluOut, DMUOut, RegDmuMuxOut;
     wire [3:0] AluControlOut;
+    wire AluZeroOut;
     
     wire EnableWrite, RegAIsImmediate, WriteToDMU, ReadFromDMU;
     
@@ -97,6 +98,7 @@ module Complete;
     wire [15:0] RegAMuxed;
     ALURegisterMux alu_mux (
         .in_reg1(RegA),
+        .instruction(Instruction),
         .immediate(FunctImm),
         .is_imm(RegAIsImmediate),
         .reg1(RegAMuxed) 
@@ -122,9 +124,8 @@ module Complete;
 
     
     initial begin
-//        $monitor("PC: %h, Instruction: %h", PC, Instruction);
-        #45;
-        // end simulation
+        // NOTE TO INSTRUCTORS: please set the number below to (the amount of instructions in your program) * 10 + 5
+        #400;
         $finish;
     end
     

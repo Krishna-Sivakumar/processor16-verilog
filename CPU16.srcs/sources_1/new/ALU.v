@@ -19,17 +19,17 @@ module ALU(
     0001    | SUB
     0010    | SLL; Shift Register Left by a certain amount
     0011    | AND
-    0100    | XOR
+    0100    | !=
     */
     always @(*) begin
-        $monitor("ALU Params: %h, %h, op: %h", a, b, control);
+        $monitor("ALU Params | A: %h | B: %h | OpCode: %h", a, b, control);
         case (control)
             4'b0000: begin
                 result = a + b;
                 zero = 0;
             end
             4'b0001: begin
-                result = a - b;
+                result = b - a;
                 zero = 0;
             end
             4'b0010: begin
@@ -41,8 +41,9 @@ module ALU(
                 zero = 0;
             end
             4'b0100: begin
+                $monitor("is %h != %h? %h", a, b, a != b);
                 result = 0;
-                zero = a ^ b;
+                zero = a != b;
             end
             default: begin
                 result = 0;

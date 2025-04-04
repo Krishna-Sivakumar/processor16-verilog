@@ -14,7 +14,7 @@ module RegisterFile(
     );
     
     integer i;
-    reg [15:0] file [4:0];
+    reg [15:0] file [15:0];
     
     initial begin
         for (i = 0; i < 16; i = i + 1) begin

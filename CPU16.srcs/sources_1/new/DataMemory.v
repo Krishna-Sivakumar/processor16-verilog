@@ -24,14 +24,15 @@ module DataMemory(
         if (mem_write) begin
             // little-endian:   0x ff 0a (example value)
             // big-endian:      0x 0a ff
-            mem[location] <= write_data[15:8];
-            mem[location+1] <= write_data[7:0];
+            mem[location] <= write_data[7:0];
+            mem[location+1] <= write_data[15:8];
             read_data <= 0;
         end
     end
     
     always @(*) begin
         if (mem_read) begin
+            $monitor("lw: location:%h %h %h", location, mem[location], mem[location+1]);
             // little-endian:   0x ff 0a (example value)
             // big-endian:      0x 0a ff
             read_data[7:0] = mem[location];

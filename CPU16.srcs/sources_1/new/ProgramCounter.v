@@ -7,7 +7,7 @@ module ProgramCounter(
     );
     
     initial begin
-        pc <= 0;
+        pc = 0;
     end
 
     always @(posedge clk) begin
