@@ -11,7 +11,7 @@ Nov  8 2024
 /home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/ALURegisterMux.v,1743720486,verilog,,/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/Control.v,,ALURegisterMux,,,,,,,,
 /home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/Control.v,1743737002,verilog,,/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/DataMemory.v,,Control,,,,,,,,
 /home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/DataMemory.v,1743735772,verilog,,/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/InstructionMemory.v,,DataMemory,,,,,,,,
-/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/InstructionMemory.v,1743736099,verilog,,/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/PCUpdate.v,,InstructionMemory,,,,,,,,
+/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/InstructionMemory.v,1743737175,verilog,,/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/PCUpdate.v,,InstructionMemory,,,,,,,,
 /home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/PCUpdate.v,1743734814,verilog,,/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/ProgramCounter.v,,ProgramCounterUpdate,,,,,,,,
 /home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/ProgramCounter.v,1743731019,verilog,,/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/RegisterDmuMux.v,,ProgramCounter,,,,,,,,
 /home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/RegisterDmuMux.v,1743638712,verilog,,/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sources_1/new/register_file.v,,RegisterDmuMux,,,,,,,,
