@@ -34,10 +34,11 @@ module InstructionMemory(
         mem[1] = 16'h4_1_e_4;   // R[1] != R[15]? PC = PC + 1 + 4 (jumps past the end of the loop, past the jmp command)
         mem[2] = 16'h3_1_1_f;   // R[1] = R[1] + (-1)
         mem[3] = 16'h3_2_2_2;   // R[2] = R[2] + 2
-        mem[4] = 16'h2_2_e_0;   // DM[0] = R[2] (DM should be 0x0c 0x00 ...)
+        mem[4] = 16'h2_2_e_1;   // DM[1] = R[2] (DM should be 0x00 0x00 0x0c ...)
         mem[5] = 16'h6_ffb;     // jmp; PC = PC + 1 - 5 (each addition is a word)
-        mem[6] = 16'h2_2_e_1;   // DM[1] = R[2] (DM should be 0x0c 0x0c 0x00 ...)
-        mem[7] = 16'h1_4_e_0;   // R[4] = DM[0] (should be 0x0c 0x0c)
+        mem[6] = 16'h2_2_e_0;   // DM[1] = R[2] (DM should be 0x00 0x0c 0x0c ...)
+        mem[7] = 16'h1_4_e_1;   // R[4] = DM[1] (should be 0x0c 0x0c)
+        mem[8] = 16'h1_5_e_0;   // R[5] = DM[0] (should be 0x00 0x0c)
     end
 
     always @(pc) begin

@@ -1,28 +1,8 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 03/31/2025 06:35:57 PM
-// Design Name: 
-// Module Name: Complete
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module Complete;
 
-    reg clk;
+    reg clk;        // TODO should be bound to an external input
     initial begin
         // oscillate the clock every 2ns
         clk = 1;
@@ -51,7 +31,7 @@ module Complete;
         .clk(clk)
     );
     
-    wire [15:0] RegA, RegB, AluOut, DMUOut, RegDmuMuxOut;
+    wire [15:0] RegA, RegB, AluOut, DMUOut, RegDmuMuxOut; // TODO RegA should be an external output
     wire [3:0] AluControlOut;
     wire AluZeroOut;
     
@@ -121,7 +101,16 @@ module Complete;
         .read_data(DMUOut),
         .clk(clk)
     );
-
+    
+    /*
+    Display display (
+        .clock_100Mhz(),    // TODO this should be an external input
+        .reset(),           // TODO this should be an external input
+        .value(RegA),
+        .led_out(),         // TODO this should be an external output
+        .anode()            // TODO this should be an external output
+    )
+    */
     
     initial begin
         // NOTE FOR INSTRUCTORS: please set the timestamp below to a long enough number so that the program can finish executing.

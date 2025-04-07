@@ -1,0 +1,94 @@
+Time resolution is 1 ps
+REGISTER FILE | wrote 000c at location 1
+REGISTER FILE | wrote 0000 at location 1
+REGISTER FILE | wrote 0005 at location 1
+REGISTER FILE | wrote 0004 at location 1
+REGISTER FILE | wrote 0002 at location 2
+REGISTER FILE | wrote 0004 at location 2
+REGISTER FILE | wrote 0001 at location 2
+DMU | Stored 0002 to location 01
+REGISTER FILE | wrote 0000 at location f
+DMU | Stored 0000 to location 00
+REGISTER FILE | wrote 0000 at location 1
+DMU | Stored 0005 to location 00
+DMU | Stored 0005 to location 04
+REGISTER FILE | wrote 0004 at location 1
+REGISTER FILE | wrote 0003 at location 1
+DMU | Stored 0004 to location 03
+REGISTER FILE | wrote 0004 at location 2
+DMU | Stored 0002 to location 04
+REGISTER FILE | wrote 0006 at location 2
+DMU | Stored 0004 to location 06
+DMU | Stored 0004 to location 01
+REGISTER FILE | wrote 0001 at location 2
+REGISTER FILE | wrote 0000 at location f
+DMU | Stored 0000 to location 00
+REGISTER FILE | wrote 0000 at location 1
+DMU | Stored 0004 to location 00
+DMU | Stored 0004 to location 03
+REGISTER FILE | wrote 0003 at location 1
+REGISTER FILE | wrote 0002 at location 1
+DMU | Stored 0003 to location 02
+REGISTER FILE | wrote 0006 at location 2
+DMU | Stored 0004 to location 06
+REGISTER FILE | wrote 0008 at location 2
+DMU | Stored 0006 to location 08
+DMU | Stored 0006 to location 01
+REGISTER FILE | wrote 0001 at location 2
+REGISTER FILE | wrote 0000 at location f
+DMU | Stored 0000 to location 00
+REGISTER FILE | wrote 0000 at location 1
+DMU | Stored 0003 to location 00
+DMU | Stored 0003 to location 02
+REGISTER FILE | wrote 0002 at location 1
+REGISTER FILE | wrote 0001 at location 1
+DMU | Stored 0002 to location 01
+REGISTER FILE | wrote 0008 at location 2
+DMU | Stored 0006 to location 08
+REGISTER FILE | wrote 000a at location 2
+DMU | Stored 0008 to location 0a
+DMU | Stored 0008 to location 01
+REGISTER FILE | wrote 0001 at location 2
+REGISTER FILE | wrote 0000 at location f
+DMU | Stored 0000 to location 00
+REGISTER FILE | wrote 0000 at location 1
+DMU | Stored 0002 to location 00
+DMU | Stored 0002 to location 01
+REGISTER FILE | wrote 0001 at location 1
+REGISTER FILE | wrote 0000 at location 1
+DMU | Stored 0001 to location 00
+REGISTER FILE | wrote 000a at location 2
+DMU | Stored 0008 to location 0a
+REGISTER FILE | wrote 000c at location 2
+DMU | Stored 000a to location 0c
+DMU | Stored 000a to location 01
+REGISTER FILE | wrote 0001 at location 2
+REGISTER FILE | wrote 0000 at location f
+DMU | Stored 0000 to location 00
+REGISTER FILE | wrote 0000 at location 1
+DMU | Stored 0001 to location 00
+REGISTER FILE | wrote ffff at location 1
+DMU | Stored 0000 to location ff
+REGISTER FILE | wrote 000c at location 2
+DMU | Stored 000a to location 0c
+REGISTER FILE | wrote 000e at location 2
+DMU | Stored 000c to location 0e
+DMU | Stored 000c to location 01
+REGISTER FILE | wrote 0001 at location 2
+REGISTER FILE | wrote 0000 at location f
+DMU | Stored 0000 to location 00
+REGISTER FILE | wrote 0000 at location 1
+REGISTER FILE | wrote 0000 at location 2
+DMU | Stored 000c to location 00
+REGISTER FILE | wrote 0c0c at location 4
+DMU | Stored 0000 to location 01
+DMU | Loaded 0c0c from location 01
+DMU | Stored 0c0c to location 01
+REGISTER FILE | wrote 000c at location 5
+DMU | Stored 0000 to location 00
+DMU | Loaded 000c from location 00
+DMU | Stored 000c to location 00
+REGISTER FILE | wrote xxxx at location x
+DMU | Stored xxxx to location xx
+DMU | Loaded 000c from location xx
+$finish called at time : 200 ns : File "/home/shiki/repos/590cse-project1/CPU16/CPU16.srcs/sim_1/new/Complete.v" Line 117

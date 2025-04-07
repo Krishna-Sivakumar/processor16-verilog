@@ -20,10 +20,8 @@ module DataMemory(
     
     always @(negedge clk) begin
         if (mem_write) begin
-            // little-endian:   0x ff 0a (example value)
-            // big-endian:      0x 0a ff
-            mem[location] <= write_data[7:0];
-            mem[location+1] <= write_data[15:8];
+            mem[location] <= write_data[15:8];
+            mem[location+1] <= write_data[7:0];
             read_data <= 0;
             $monitor("DMU | Stored %h to location %h", write_data, location);
         end
@@ -31,11 +29,8 @@ module DataMemory(
     
     always @(*) begin
         if (mem_read) begin
-//            $monitor("lw: location:%h %h %h", location, mem[location], mem[location+1]);
-            // little-endian:   0x ff 0a (example value)
-            // big-endian:      0x 0a ff
-            read_data[7:0] = mem[location];
-            read_data[15:8] = mem[location+1];
+            read_data[15:8] = mem[location];
+            read_data[7:0]  = mem[location+1];
             $monitor("DMU | Loaded %h from location %h", read_data, location);
         end
     end

@@ -23,7 +23,7 @@ module RegisterFile(
     end
     
     // was @(*)
-    always @(reg1, reg2, posedge clk) begin
+    always @(*) begin
         result_reg1 <= file[reg1];
         result_reg2 <= file[reg2];
     end
