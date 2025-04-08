@@ -10,7 +10,7 @@ module DataMemory(
     );
 
     integer i;
-    reg [7:0] mem [31:0];
+    reg [7:0] mem [64:0];
     
     initial begin
         for (i = 0; i < 32; i = i + 1) begin
